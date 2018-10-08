@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import avatar from '../theme/assets/avatars/nasa';
+import { Stories } from '../components/Stories';
 
 export class Profile extends Component {
     render() {
@@ -27,6 +28,7 @@ export class Profile extends Component {
                     </div>
                     <span className = 'name'>NASA</span>
                 </div>
+                <Stories/>
             </div>
         );
     }

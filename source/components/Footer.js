@@ -2,22 +2,20 @@ import React, { Component } from 'react';
 import links from '../theme/assets/links';
 
 export class Footer extends Component {
+    COPYRIGHT_SYMBOL = String.fromCodePoint(169);
+    CURRENT_YEAR = new Date().getFullYear();
+
     render() {
         const linksJSX = links.map((link) => {
-            return (
-                <link
-                    key = { link.id }
-                    message = { link.message }
-                />
-            );
+            return <li key = { link.id }>{link.message}</li>;
         });
 
         return (
             <div className = 'footer'>
-                <div className = 'ul'>
-                    <div className = 'li'>{linksJSX}</div>
-                </div>
-                <div className = 'span'/>
+                <ul>{linksJSX}</ul>
+                <span>
+                    {this.COPYRIGHT_SYMBOL} {this.CURRENT_YEAR} Instagram
+                </span>
             </div>
         );
     }
